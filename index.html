@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业访客管理系统</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(160deg, #f8fafc 0%, #eef3fa 50%, #dce8f7 100%); color: #1f2d3d; padding: 24px;
+}
+.wrap { max-width: 680px; width: 100%; }
+.logo { width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 15px; background: linear-gradient(135deg, #2563eb, #60a5fa); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 28px rgba(37,99,235,0.3); }
+.logo svg { width: 26px; height: 26px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+h1 { text-align: center; font-size: 22px; color: #0f2d5c; letter-spacing: 1px; }
+.tag { text-align: center; color: #5b6b80; font-size: 13px; margin: 6px 0 30px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card {
+  display: block; text-decoration: none; background: rgba(255,255,255,0.86); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.9); border-radius: 16px; padding: 26px 22px;
+  box-shadow: 0 6px 24px rgba(15,45,92,0.09); transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(37,99,235,0.16); }
+.ci { width: 40px; height: 40px; border-radius: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.ci svg { width: 19px; height: 19px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.card h2 { font-size: 16px; color: #0f2d5c; margin-bottom: 6px; }
+.card p { font-size: 12.5px; color: #5b6b80; line-height: 1.75; }
+.pill { display: inline-block; margin-top: 12px; padding: 2px 11px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+.pill.a { background: #eff6ff; color: #2563eb; }
+.pill.b { background: #fff7ed; color: #d97706; }
+.foot { text-align: center; margin-top: 30px; font-size: 11px; color: #8fa2bd; line-height: 1.9; }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+  <h1>企业访客管理系统</h1>
+  <div class="tag">Visitor Management System · 纯原生单文件网页 · 双击即用 · 数据存于本地浏览器</div>
+  <div class="cards">
+    <a class="card" href="企业访客管理系统.html">
+      <div class="ci" style="background:#eff6ff;color:#2563eb;"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h2>正式版</h2>
+      <p>空库初始化，供实际使用。初始口令：管理员 admin / 前台 1234，首次使用请尽快修改。</p>
+      <span class="pill a">推荐使用</span>
+    </a>
+    <a class="card" href="企业访客管理系统交互原型.html">
+      <div class="ci" style="background:#fff7ed;color:#d97706;"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM18 18h3v3h-3z"/></svg></div>
+      <h2>交互原型</h2>
+      <p>预置演示数据，可快速体验登记、签离、黑名单、超时提醒等全部功能流程。</p>
+      <span class="pill b">演示体验</span>
+    </a>
+  </div>
+  <div class="foot">覆盖访客全生命周期：预约 → 登记 → 在访 → 签离 ｜ 黑名单 · 历史查询 · 统计看板 · 超时提醒<br>GitHub Pages 部署 · 源码见仓库</div>
+</div>
+</body>
+</html>
